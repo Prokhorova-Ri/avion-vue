@@ -1,0 +1,45 @@
+@import url("http://fonts.cdnfonts.com/css/satoshi");
+@import url("http://fonts.cdnfonts.com/css/clash-display");
+
+:root {
+  --satoshi: "Satoshi", sans-serif;
+  --clash: "Clash Display", sans-serif;
+  --black: #22202e;
+  --grey: #726e8d;
+  --light-grey: #f9f9f9;
+  --midle-grey: #5b5676;
+  --dark-primary: #2A254B;
+}
+
+* {
+  box-sizing: border-box;
+  font-weight: 400;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  color: var(--black);
+  font-family: var(--satoshi);
+}
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+img {
+  max-width: 100%;
+}
+.container {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.input-text {
+  height: 56px;
+  padding: 0 32px;
+  font-size: 16px;
+  border: none;
+}
