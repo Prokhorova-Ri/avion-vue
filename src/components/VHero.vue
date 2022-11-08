@@ -10,6 +10,7 @@ import VHeroInformation from "@/components/VHeroInformation.vue";
       link="View collection"
       colorLink="lightgrey"
     />
+    <img class="hero-image" src="/img/hero.jpg" alt="" />
   </div>
 </template>
 
@@ -22,8 +23,19 @@ import VHeroInformation from "@/components/VHeroInformation.vue";
   background-size: cover;
   justify-content: flex-end;
   padding-right: 80px;
-  &-img {
+  @media screen and (max-width: 767px) {
+    display: block;
+    height: auto;
+    background: transparent;
+    padding-right: 0;
+  }
+  &-image {
     max-width: 100%;
+    margin-top: 32px;
+    display: none;
+    @media screen and (max-width: 767px) {
+      display: block;
+    }
   }
 }
 </style>

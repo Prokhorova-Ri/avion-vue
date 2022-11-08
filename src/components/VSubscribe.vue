@@ -1,5 +1,5 @@
 <script setup>
-import VButton from "@/components/UI/VButton.vue";
+import VSubscribeForm from "@/components/VSubscribeForm.vue";
 </script>
 
 <template>
@@ -24,14 +24,7 @@ import VButton from "@/components/UI/VButton.vue";
           <span class="subscribe-check__name">Large discounts</span>
         </div>
       </div>
-      <form class="subscribe-form">
-        <input
-          class="input-text subscribe-form__input"
-          type="text"
-          placeholder="your@email.com"
-        />
-        <VButton>Sign up</VButton>
-      </form>
+      <VSubscribeForm />
     </div>
   </div>
 </template>
@@ -41,11 +34,20 @@ import VButton from "@/components/UI/VButton.vue";
   background: url("/img/email-image.jpg");
   background-size: cover;
   padding: 97px 0 86px 0;
+  @media screen and (max-width: 767px) {
+    background-image: url("/img/email-mobile.jpg");
+    background-size: cover;
+    padding: 24px;
+    margin: 0 -24px;
+  }
   &-content {
     max-width: 495px;
     margin: 0 auto;
     text-align: center;
     color: #fff;
+    @media screen and (max-width: 767px) {
+      text-align: left;
+    }
   }
   &-title {
     display: block;
@@ -53,6 +55,9 @@ import VButton from "@/components/UI/VButton.vue";
     font-size: 32px;
     line-height: 1.4;
     margin: 0 0 12px 0;
+    @media screen and (max-width: 767px) {
+      font-size: 24px;
+    }
   }
   &-description {
     display: block;
@@ -60,24 +65,29 @@ import VButton from "@/components/UI/VButton.vue";
     font-size: 18px;
     line-height: 1.5;
     margin: 0 0 30px 0;
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
   }
   &-checks {
     display: flex;
     justify-content: center;
     margin: 0 0 40px 0;
+    @media screen and (max-width: 767px) {
+      display: block;
+    }
   }
   &-check {
     display: flex;
     align-items: center;
     margin: 0 36px 0 0;
+    @media screen and (max-width: 767px) {
+      margin: 0;
+      margin-bottom: 8px;
+    }
     &__icon {
       margin: 0 8px 0 0;
-    }
-  }
-  &-form {
-    display: flex;
-    &__input {
-      flex-grow: 1;
     }
   }
 }

@@ -16,6 +16,10 @@ const props = defineProps({
     type: String,
     default: "primary",
   },
+  mobileFullWidth: {
+    type: Boolean,
+    default: false,
+  },
 });
 </script>
 
@@ -28,6 +32,8 @@ const props = defineProps({
         'btn--primary': color === 'primary',
         'btn--secondary': color === 'secondary',
         'btn--lightgrey': color === 'lightgrey',
+        'btn--white': color === 'white',
+        'btn--fullwidth': mobileFullWidth,
       },
     ]"
   >
@@ -42,6 +48,8 @@ const props = defineProps({
         'btn--primary': color === 'primary',
         'btn--secondary': color === 'secondary',
         'btn--lightgrey': color === 'lightgrey',
+        'btn--white': color === 'white',
+        'btn--fullwidth': mobileFullWidth,
       },
     ]"
   >
@@ -59,32 +67,36 @@ const props = defineProps({
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  white-space: nowrap;
   cursor: pointer;
   border: none;
+  @media screen and (max-width: 767px) {
+    padding: 16px 12px;
+    font-size: 14px;
+  }
   &:hover {
     opacity: 0.8;
+    text-decoration: underline;
   }
   &--primary {
     background: var(--dark-primary);
     color: #fff;
-    cursor: pointer;
-    &:hover {
-      text-decoration: underline;
-      background: #ebe9e9;
-    }
   }
   &--secondary {
     background: rgba(249, 249, 249, 0.15);
     color: #fff;
-    cursor: pointer;
   }
   &--lightgrey {
     background: #f9f9f9;
-    color: #2a254b;
-    cursor: pointer;
-    &:hover {
-      text-decoration: underline;
-      background: #ebe9e9;
+    color: var(--dark-primary);
+  }
+  &--white {
+    background: #fff;
+    color: var(--dark-primary);
+  }
+  &--fullwidth {
+    @media screen and (max-width: 767px) {
+      width: 100%;
     }
   }
 }

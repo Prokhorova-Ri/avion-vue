@@ -39,6 +39,9 @@ const props = defineProps({
     line-height: 28px;
     margin-bottom: 8px;
     text-decoration: none;
+    @media screen and (max-width: 767px) {
+      font-size: 16px;
+    }
     &:hover {
       text-decoration: underline;
     }
@@ -47,6 +50,9 @@ const props = defineProps({
     display: block;
     color: var(--dark-primary);
     font-size: 18px;
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+    }
   }
 }
 </style>

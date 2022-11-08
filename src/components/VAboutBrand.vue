@@ -54,6 +54,10 @@ const aboutBrands = [
 <style lang="scss" scoped>
 .about-brand {
   padding: 80px 80px 130px 80px;
+  @media screen and (max-width: 767px) {
+    padding: 48px 0;
+  }
+
   &__title {
     font-family: var(--clash);
     font-size: 24px;
@@ -61,17 +65,33 @@ const aboutBrands = [
     text-align: center;
     color: var(--dark-primary);
     margin: 0 0 36px 0;
+    @media screen and (max-width: 767px) {
+      text-align: left;
+      font-size: 20px;
+      margin-bottom: 36px;
+    }
   }
   &-elements {
     display: grid;
     grid-template-columns: repeat(4, auto);
     column-gap: 10px;
     justify-content: space-between;
+    @media screen and (max-width: 1150px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    @media screen and (max-width: 767px) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
   }
   &-element {
     background: var(--light-grey);
     padding: 48px;
     color: var(--dark-primary);
+    @media screen and (max-width: 767px) {
+      padding: 36px 0;
+    }
     &__img {
       display: block;
       margin-bottom: 12px;

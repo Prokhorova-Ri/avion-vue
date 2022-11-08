@@ -11,8 +11,9 @@ import VHeroInformation from "@/components/VHeroInformation.vue";
       colorDescription="#fff"
       background="var(--dark-primary)"
       colorLink="secondary"
+      :mobilePadding="true"
     />
-    <img src="/img/product-5.jpg" alt="image" />
+    <img src="/img/product-5.jpg" alt="image" class="ideas-image" />
   </div>
 </template>
 
@@ -23,5 +24,20 @@ import VHeroInformation from "@/components/VHeroInformation.vue";
   column-gap: 16px;
   padding: 0 80px;
   margin-bottom: 60px;
+  @media screen and (max-width: 1024px) {
+    padding: 0 20px;
+  }
+  @media screen and (max-width: 767px) {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+  &-image {
+    height: 444px;
+    object-fit: cover;
+    @media screen and (max-width: 767px) {
+      margin-top: 24px;
+      height: auto;
+    }
+  }
 }
 </style>

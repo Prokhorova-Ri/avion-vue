@@ -1,8 +1,13 @@
-<script setup></script>
+<script setup>
+import VHeader from "@/components/Layout/VHeader.vue";
+import VFooter from "@/components/Layout/VFooter.vue";
+</script>
 
 <template>
   <div class="container">
+    <VHeader />
     <RouterView />
+    <VFooter />
   </div>
 </template>
 

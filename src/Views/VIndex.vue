@@ -1,5 +1,4 @@
 <script setup>
-import VHeader from "@/components/Layout/VHeader.vue";
 import VHero from "@/components/VHero.vue";
 import VAboutBrand from "@/components/VAboutBrand.vue";
 import VProducts from "@/components/VProductsOne.vue";
@@ -9,8 +8,7 @@ import VSubscribe from "@/components/VSubscribe.vue";
 </script>
 
 <template>
-  <div class="container">
-    <VHeader />
+  <div>
     <VHero />
     <VAboutBrand />
     <VProducts />

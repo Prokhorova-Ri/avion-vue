@@ -41,9 +41,16 @@ const products = ref([
         :price="product.price"
       />
     </div>
-    <VButton class="products-link" :color="lightgrey" type="link" to="/"
-      >View collection</VButton
-    >
+    <div class="products-link">
+      <VButton
+        :mobileFullWidth="true"
+        class="products-link"
+        :color="lightgrey"
+        type="link"
+        to="/"
+        >View collection</VButton
+      >
+    </div>
   </div>
 </template>
 
@@ -54,6 +61,13 @@ const products = ref([
   grid-template-columns: repeat(4, 1fr);
   column-gap: 20px;
   margin-bottom: 64px;
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 0;
+  }
   &-container {
     margin-bottom: 56px;
   }
@@ -66,6 +80,9 @@ const products = ref([
     color: var(--dark-primary);
     text-decoration: none;
     cursor: pointer;
+    @media screen and (max-width: 767px) {
+      width: auto;
+    }
     &:hover {
       text-decoration: underline;
       background: #ebe9e9;
