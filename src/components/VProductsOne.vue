@@ -2,32 +2,12 @@
 import { ref } from "vue";
 import VProduct from "@/components/VProduct.vue";
 import VButton from "@/components/UI/VButton.vue";
-const products = ref([
-  {
-    id: 1,
-    img: "/img/product-1.jpg",
-    title: "The Dandy chair",
-    price: "250",
+
+const props = defineProps({
+  products: {
+    required: true,
   },
-  {
-    id: 2,
-    img: "/img/product-2.jpg",
-    title: "Rustic Vase Set",
-    price: "155",
-  },
-  {
-    id: 3,
-    img: "/img/product-3.jpg",
-    title: "The Silky Vase",
-    price: "125",
-  },
-  {
-    id: 4,
-    img: "/img/product-4.jpg",
-    title: "The Lucy Lamp",
-    price: "399",
-  },
-]);
+});
 </script>
 
 <template>
@@ -35,6 +15,7 @@ const products = ref([
     <div class="products">
       <VProduct
         v-for="product of products"
+        :id="product.id"
         :key="product.id"
         :img="product.img"
         :title="product.title"
